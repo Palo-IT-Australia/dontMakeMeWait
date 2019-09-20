@@ -1,9 +1,17 @@
-version: "2"
+version: "3"
 services:
-    bot:
-        # build: .
-        image: kakashiel/dmmw:0.1 
-        volumes:
-            - .:/app
-        ports:
-            - "80:3000"
+  back:
+    build: ./back/
+    image: dontmakemewait.azurecr.io/dmmw-back:0.1
+    volumes:
+      - ./back/:/app
+    restart: always
+
+  front:
+    build: ./front/
+    image: dontmakemewait.azurecr.io/dmmw-front:0.1
+    volumes:
+      - ./front/:/app
+    ports:
+      - "80:80"
+    restart: always
