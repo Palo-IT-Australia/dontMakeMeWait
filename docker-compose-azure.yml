@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    image: dontmakemewait.azurecr.io/dmmw-front:0.1
+    ports:
+      - "80:80"
+    restart: always
+  back:
+    image: dontmakemewait.azurecr.io/dmmw-back:0.1
+    restart: always

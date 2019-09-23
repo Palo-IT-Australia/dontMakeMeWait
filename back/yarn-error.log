@@ -1,0 +1,53 @@
+Arguments: 
+  /Users/adriendemontey/.nvm/versions/node/v10.16.0/bin/node /usr/local/Cellar/yarn/1.17.0/libexec/bin/yarn.js
+
+PATH: 
+  /Users/adriendemontey/google-cloud-sdk/bin:/Users/adriendemontey/.nvm/versions/node/v10.16.0/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/Users/adriendemontey/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/adriendemontey/.jx/bin:/Users/adriendemontey/.fzf/bin
+
+Yarn version: 
+  1.17.0
+
+Node version: 
+  10.16.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/adriendemontey/work/dont-make-me-wait-gov-hack-2018/dontMakeMeWait/back/package.json: Unexpected token } in JSON at position 357
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.17.0/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.17.0/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.17.0/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "luckyshotapi",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+      "start": "nodemon server.js"
+    },
+    "dependencies": {
+      "cookie-parser": "~1.4.3",
+      "debug": "~2.6.9",
+      "express": "^4.16.3",
+      "get-closest": "0.0.4",
+      "http-errors": "~1.6.2",
+      "jade": "~1.11.0",
+      "levenshtein": "^1.0.5",
+      "morgan": "~1.9.0",
+    },
+    "devDependencies": {
+      "body-parser": "^1.19.0",
+      "cron": "^1.4.1",
+      "nodemon": "^1.18.4",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

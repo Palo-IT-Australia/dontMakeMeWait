@@ -1,0 +1,9 @@
+version: "2"
+services:
+    bot:
+        # build: .
+        image: kakashiel/dmmw:0.1 
+        volumes:
+            - .:/app
+        ports:
+            - "80:3000"
