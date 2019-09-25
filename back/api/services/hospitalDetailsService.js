@@ -4,6 +4,13 @@ const https = require('https');
 const googleDetails = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=";
 const GetHospitalDetailsBaseUrl = "https://ws-spsl-ext-non-auth.webapp.health.nsw.gov.au/rted/api/GetHospitalDetails/";
 
+function getOpenNow(googleData) {
+  if(googleData.candidates[0].opening_hours){
+    return googleData.candidates[0].opening_hours.open_now || false;
+  }
+  return false;
+}
+
 exports.getHospitalDetails = (hospital, callback) => {
 
   let url = googleDetails + hospital.name +
@@ -23,7 +30,7 @@ exports.getHospitalDetails = (hospital, callback) => {
       if (googleData.candidates[0]) {
         callback({
           rating: googleData.candidates[0].rating,
-          open_now: googleData.candidates[0].opening_hours.open_now
+          open_now: getOpenNow(googleData)
         });
       } else {
         callback({

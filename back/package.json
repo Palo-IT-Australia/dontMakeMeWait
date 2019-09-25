@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "dev": "nodemon ./server.js localhost 8080"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",

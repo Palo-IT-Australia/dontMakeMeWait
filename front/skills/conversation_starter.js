@@ -323,11 +323,11 @@ module.exports = function (controller) {
           text: 'You may require urgent medical attention. Please <strong><strong>dial 000</strong></strong> and speak to an emergency operator.',
         }, 'recommendation_bad');
 
-        var recommendationText = 'I recommend this hospital: <strong>' + state.hos.closest.name + '</strong>' +
-          '. <br/> It is <strong>' + state.hos.closest.direction.distance.text + '</strong> from here.' +
-          'The average wait time for your condition is <strong>' + state.hos.closest.direction.duration.text + ' </strong>. </br>' +
-          'There are currently <strong>' + state.hos.closest.waitCount.toString() + ' people</strong> in the waiting room. </br> ' +
-          'If I order an Uber now, I estimate that you will be treated within <strong>' + state.hos.closest.waitingTime.text + '</strong>.';
+        // var recommendationText = 'I recommend this hospital: <strong>' + state.hos.closest.name + '</strong>' +
+        //   '. <br/> It is <strong>' + state.hos.closest.direction.distance.text + '</strong> from here.' +
+        //   'The average wait time for your condition is <strong>' + state.hos.closest.direction.duration.text + ' </strong>. </br>' +
+        //   'There are currently <strong>' + state.hos.closest.waitCount.toString() + ' people</strong> in the waiting room. </br> ' +
+        //   'If I order an Uber now, I estimate that you will be treated within <strong>' + state.hos.closest.waitingTime.text + '</strong>.';
         convo.addMessage({
           text: recommendationText,
         }, 'recommendation');
